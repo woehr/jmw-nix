@@ -10,6 +10,7 @@
     haskellPackages.cabalInstall
     haskellPackages.ghc
     vim
+    xclip
     xlibs.xset
   ];
 }
