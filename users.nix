@@ -1,8 +1,6 @@
 { config, lib, pkgs, ... }:
 {
   users = {
-    mutableUsers = false;
-
     extraUsers.jordan = {
       name = "jordan";
       group = "users";
