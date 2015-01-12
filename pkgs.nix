@@ -9,6 +9,7 @@
     haskellPackages.cabal2nix
     haskellPackages.cabalInstall
     haskellPackages.ghc
+    haskellPackages.ghcMod
     vim
     xclip
     xlibs.xset
