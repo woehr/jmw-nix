@@ -6,10 +6,13 @@
     evince
     file
     gitFull
-    haskellPackages.cabal2nix
-    haskellPackages.cabalInstall
-    haskellPackages.ghc
-    haskellPackages.ghcMod
+    haskellngPackages.ghc
+
+    haskellngPackages.cabal2nix
+    haskellngPackages.cabal-install
+    haskellngPackages.ghc-mod
+
+    stdenv
     vim
     xclip
     xlibs.xset
