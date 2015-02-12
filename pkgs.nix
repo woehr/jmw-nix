@@ -6,8 +6,8 @@
     evince
     file
     gitFull
-    haskellngPackages.ghc
 
+    haskellngPackages.ghc
     haskellngPackages.cabal2nix
     haskellngPackages.cabal-install
     haskellngPackages.ghc-mod
