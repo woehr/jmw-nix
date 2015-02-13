@@ -12,6 +12,7 @@
     haskellngPackages.cabal-install
     haskellngPackages.ghc-mod
 
+    nix-repl
     stdenv
     vim
     xclip
