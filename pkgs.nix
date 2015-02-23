@@ -13,6 +13,7 @@
     haskellngPackages.ghc-mod
 
     nix-repl
+    psmisc      # for pstree
     stdenv
     vim
     xclip
