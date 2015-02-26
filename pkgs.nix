@@ -5,7 +5,7 @@
     chromium
     evince
     file
-    gcc-wrapper
+    gcc49
     gitFull
     gnumake
     nix-repl
