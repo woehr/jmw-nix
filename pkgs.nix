@@ -1,21 +1,22 @@
-{ config, lib, pkgs, ... }:
+i{ config, lib, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     binutils
     chromium
     evince
     file
+    gcc-wrapper
     gitFull
-
-    haskellngPackages.ghc
-    haskellngPackages.cabal2nix
-    haskellngPackages.cabal-install
-    haskellngPackages.ghc-mod
-
+    gnumake
     nix-repl
     stdenv
     vim
     xclip
     xlibs.xset
+
+    haskellngPackages.ghc
+    haskellngPackages.cabal2nix
+    haskellngPackages.cabal-install
+    haskellngPackages.ghc-mod
   ];
 }
