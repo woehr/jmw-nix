@@ -9,6 +9,7 @@ i{ config, lib, pkgs, ... }:
     gitFull
     gnumake
     nix-repl
+    psmisc      # for pstree
     stdenv
     vim
     xclip
