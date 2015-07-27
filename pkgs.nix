@@ -2,8 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     binutils
-    chromium
-    evince
     file
     gcc49
     gitFull
@@ -15,9 +13,6 @@
     xclip
     xlibs.xset
 
-    haskellngPackages.ghc
-    haskellngPackages.cabal2nix
-    haskellngPackages.cabal-install
-    haskellngPackages.ghc-mod
+    haskellPackages.cabal2nix
   ];
 }
