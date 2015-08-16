@@ -9,7 +9,7 @@
     nix-repl
     psmisc      # for pstree
     stdenv
-    vim
+    vim_configurable
     xclip
     xlibs.xset
 
