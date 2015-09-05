@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     binutils
+    cabal2nix
     file
     gcc49
     gitFull
@@ -12,7 +13,5 @@
     vim_configurable
     xclip
     xlibs.xset
-
-    haskellPackages.cabal2nix
   ];
 }
