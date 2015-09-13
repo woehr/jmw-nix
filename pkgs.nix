@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    ack
     binutils
     cabal2nix
     file
