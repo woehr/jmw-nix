@@ -4,12 +4,14 @@
     ack
     binutils
     cabal2nix
+    emacs
     file
-    gcc49
+    gcc
     gitFull
     gnumake
     nix-repl
     psmisc      # for pstree
+    rxvt-unicode
     stdenv
     vim_configurable
     xclip

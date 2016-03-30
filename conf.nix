@@ -2,7 +2,19 @@
 {
   time.timeZone = "America/Edmonton";
 
-  fonts.enableCoreFonts = true;
+#  fonts.enableCoreFonts = true;
+# https://nixos.org/wiki/Fonts
+  fonts = {
+    enableFontDir = true;
+    enableGhostscriptFonts = true;
+    fontconfig.enable = true;
+    fonts = with pkgs; [
+      corefonts  # Micrsoft free fonts
+      inconsolata  # monospaced
+      ubuntu_font_family  # Ubuntu fonts
+      unifont # some international languages
+    ];
+  };
 
   programs = {
     zsh.enable = true;
