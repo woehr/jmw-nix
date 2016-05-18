@@ -11,7 +11,7 @@
     gnumake
     nix-repl
     psmisc      # for pstree
-    rxvt-unicode
+    rxvt_unicode
     stdenv
     vim_configurable
     xclip
