@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  imports =[ ./hardware-configuration.nix ];
+  imports =[ /etc/nixos/hardware-configuration.nix ];
 
   fileSystems = {
     "/GDrive" = {
@@ -49,12 +49,12 @@
   environment = {
     systemPackages = with pkgs; [
       binutils coreutils diffutils findutils
-      bash bashInteractive file psmisc sudo which xz
+      bash bashInteractive
+      file psmisc sudo tree which xz
       gawk gnugrep gnumake gnused gnutar gzip
-      openssh rxvt_unicode xclip xdotool
+      openssh rxvt_unicode xclip
       gitAndTools.gitFull mercurial
-      neovim emacs
-      nix nix-repl
+      nix
       shared_mime_info
     ];
     pathsToLink = [ "share" ];
@@ -84,5 +84,5 @@
   };
 
   security.sudo.enable = true;
-  system.stateVersion = "17.09";
+  system.nixos.stateVersion = "18.03";
 }
