@@ -48,28 +48,57 @@
 
   environment = {
     systemPackages = with pkgs; [
-      binutils coreutils diffutils findutils
-      bash bashInteractive
-      file psmisc sudo tree which xz
-      gawk gnugrep gnumake gnused gnutar gzip
-      openssh rxvt_unicode xclip
-      gitAndTools.gitFull mercurial
+      bash
+      bashInteractive
+      binutils
+      coreutils
+      diffutils
+      docker
+      file
+      findutils
+      gawk
+      gitAndTools.gitFull
+      gnugrep
+      gnumake
+      gnused
+      gnutar
+      gzip
+      mercurial
       nix
+      openssh
+      perl
+      psmisc
+      python3
+      ripgrep
+      ruby
+      rxvt_unicode
       shared_mime_info
+      sudo
+      tree
+      which
+      xclip
+      xz
     ];
     pathsToLink = [ "share" ];
   };
 
-  services.xserver = {
-    enable = true;
-    layout = "us";
+  programs = {
+    ssh = {
+      startAgent = true;
+    };
+  };
 
-    displayManager = {
-      lightdm = {
-        enable = true;
-        autoLogin.enable = true;
-        autoLogin.user = "jordan";
-        greeter.enable = false;
+  services = {
+    xserver = {
+      enable = true;
+      layout = "us";
+      displayManager = {
+        lightdm = {
+          enable = true;
+          autoLogin.enable = true;
+          autoLogin.user = "jordan";
+          greeter.enable = false;
+        };
       };
     };
   };
@@ -77,11 +106,13 @@
   users.extraUsers = {
     jordan = {
       createHome = true;
-      extraGroups = [ "wheel" "disk" "vboxusers" ];
+      extraGroups = [ "disk" "docker" "vboxusers" "wheel" ];
       isNormalUser = true;
       useDefaultShell = true;
     };
   };
+
+  virtualisation.docker.enable = true;
 
   security.sudo.enable = true;
   system.nixos.stateVersion = "18.03";
